@@ -1,0 +1,5 @@
+sceneSetups:
+- path: Assets/_01Scenes/03_BuyTools.unity
+  isLoaded: 1
+  isActive: 1
+  isSubScene: 0
