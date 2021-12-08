@@ -114,8 +114,8 @@ public class PlayerMove : View
     }
     private IEnumerator m_goalCoroutine;//MoveBall()
 
-    public GameObject m_Net;//球网 未射门时经过球门会触发球网动效
-    public GameObject m_SpeedUp;//加速
+    public GameObject m_qiuWang;//球网 未射门时经过球门会触发球网动效
+    public GameObject m_jiaSu;//加速
     IEnumerator m_showHideNet;//ShowHideNet
     IEnumerator m_showHideSpeedUp;//ShowHideSpeedUP
 
@@ -272,15 +272,15 @@ public class PlayerMove : View
 
     IEnumerator ShowHideNet()
     {
-        m_Net.SetActive(true);
+        m_qiuWang.SetActive(true);
         yield return new WaitForSeconds(1);//1*timescale 执行次序在后
-        m_Net.SetActive(false);
+        m_qiuWang.SetActive(false);
     }
     IEnumerator ShowHideSpeedUp()
     {
-        m_SpeedUp.SetActive(true);
+        m_jiaSu.SetActive(true);
         yield return new WaitForSeconds(1);
-        m_SpeedUp.SetActive(false);
+        m_jiaSu.SetActive(false);
     }
 
     public void HitObstacles()//撞击障碍物后速度为零并开启协程进行速度恢复
